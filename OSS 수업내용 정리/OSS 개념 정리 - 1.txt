@@ -1,0 +1,45 @@
+버전 관리 - 언제, 누가, 어떤 내용을 바꾸었는지 변경사항을 추적, 관리
+Command Line Interface - 명령어 줄 인터페이스 방식 (CLI)
+Graphic User Interface - 그래픽 사용자 인터페이스 방식 (GUI)
+
+commit <- 저장소의 현 상태를 저장
+head <- 가장 최근의 커밋을 가리킴
+
+저장소 -> 원격 저장소(Remote), 지역 저장소 (local)
+원격 저장소 -> 지역 저장소 - clone (복사), pull (지역 저장소로 내리기)
+지역 저장소 -> 원격 저장소 - puch (remote로 올리기)
+
+Git - CLI 방식을 사용
+
+깃의 장점 - 소스코드에 대한 변경사항을 모든 사용자가 알 수 있음
+여러 개의 평행 분기를 통해 비선형 개발을 지원
+
+git bash 
+- 명령 행 인터페이스 (CLI)
+git GUI
+- 그래픽 인터페이스 
+
+<깃 내부 저장소 상태>
+- 작업 디렉토리 (작업 공간, 작업 트리)
+- 스테이징 영역 (statge, index)
+- 깃 저장소 
+- 임시 저장소 (stash)
+
+
+work space -> Idex(statge) - add
+Index(statge) -> local respository - commit
+
+local.rs(respository) -> remote.rs - push
+remote.rs -> local.rs - pull
+
+브랜치(branch) - 분기
+* merge - 병합
+
+git - 분산 버전 제어 소프트웨어
+github - 개발자들의 소셜 네트웩 서비스(sns)이자 웹 저장소 
+
+<github>
+git의 글로벌 웹 호스팅 서비스
+세계 최대의 오픈소스 공유 플랫폼
+오픈 저장소 사용가능 - 비공개 저장소는 제한된 사용가능(무료 사용시)
+
