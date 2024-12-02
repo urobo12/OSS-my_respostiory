@@ -1,0 +1,93 @@
+$ <- 프롬프트를 뜻함    *프롬프트 - 컴퓨터에서 다이얼로그(대화 상자) 시스템을 전제로 하는 터미널의 셸(shell) 등에서 사용자의 다음 명령이나 응답의 행동을 받아들일 준비가 되었음을 사용자에게 알려 주는 기본 메시지
+
+노란색 부분 현재 작업하고 있는 폴더
+청록색 부분은 브렌치 이름을 뜻한나다.
+
+리룩스 명령어나 깃 명령어를 사용할 수 있다.
+
+<깃 명령어>
+버전 확인 - $git --version
+설정 확인 - $git comnfig --list
+도움 - $git --help
+
+
+<깃 설정>
+기본 편집기 설정 - core.editor[]
+줄바꿈 자동변환 - core.autocrlf[]
+줄바꿈 안전 확인 - core.safecrlf[]
+사용자 이름 - user.name ai7dnn
+사용자 전자메일 - user.email ai7dnn@gmail.com
+기본 브렌치 이름 - int.defaultBranch main
+
+<설정 명령 구조>
+$git config --설정범위 설정변수 설정값
+설정 범위- [--system or --global or --local]
+
+system - 모든 사용자
+global - 현재 사용자의 모든 저장소
+local - 현재 사용자의 현재 저장소
+
+--global 옵션
+설정 내용은 .gltconfig 파일에 저장 (윈도우에서는 user(사용자) 하부 폴더에 저장)
+$git config --global core.editor notepad <- 기본 편집기를 노트패드로 지정
+$git config --get core.editor <- 현재 기본 편집기 조회& 참고
+
+$git config --global --edit   <-전역 설정 파일 편집
+$git config --global --e   <-전역 설정 파일 편집
+
+$git config --global core.autocrlf true  <- 줄바꿈 처리를 자동으로 지정
+$git config --get core.autocrlf  <-줄바꿈 처리 방법을 조회 및 참조
+$git config --global core.safecrlf false  <-줄바꿈 안전 설정을 false로 지정
+$git config --get core.safecrlf  <-줄바꿈 안전 설정을 조회 및 참조
+
+<저장소 생성>
+$git init <- 현재 디렉토리를 git repository로 만듬
+$git init basic <- 현재 촐더 하부에 폴더 basic을 생성하고 git repository로 만듬
+
+<리눅스 명령어>
+$ cd basic <- basic 폴더로 이동
+$ ls -al <- 모든 파일 확인 (./ <- 현재 디렉토리 ,../  <-부모 디렉토리 , .git/ <- 숨김 폴더)
+$ pwd <- 현재 폴더 표시
+$ mdkdir dname <- dname이란 이름의 디렉토리 생성
+$ ls <- 파일이나 폴더 확인 명령어 [-l <-파일의 상세정보, -a <- 숨김 팡리 표시, -al 위 두 개를 조합]
+$ touch fname <- 빈 파일 fname생성 
+
+$ git echo bash  <-이후 문자열을 컴퓨터 터미널에 출력하는 명령어
+$ git echo'print()'  <- 단순한 문자열은 가능하나 관호 등이 들어있는 경우, 작은 또는 큰 따음표 사용
+
+$ cat fname <- 파일 내용 보기(txt 파일이여야 보임)
+$ cp a b <- 파일 a를 b로 복사
+$ mv f1 f2 <- 파일 f1을 파일 f2로 이름 수정
+
+$ rm fname - fname 폴더 삭제
+$ rm -rf dname <- 하부에 서브폴더와 파일이 있어도 폴더 삭제, 옵션 사용[-f <-강제로 파일이나 디렉토리 삭제, -r <- 디렉토리 내부의 모든 내용 삭제]
+$ ls -t  <-파일들의 생성 시간 순(최신 생성된 파일부터)으로 표시
+$ ls -rt  <- 파일들의 생성 시간 순(생성이 오래된 파일부터)으로 표시
+$ ls -f  <- 파일 표시 시 마지막 유형에 나타나는 파일명을 끝에 표시 ['/' <- 디렉터리, '*' <-실행파일, '@' <- 링크 등]
+
+cat(concatenate)
+파일의 내용을 화면에 출력
+cat file1 file2 <- file1 과 file2를 출력
+
+파이프 기호 ( | ) 는 앞 명령의 표준 출력을 뒤 명령의 표준입력으로 처리
+cat file1 file2 | more  <- file1과 file2의 내용을 페이지 별로 출력
+cat file1 fil2 | head <- file1과 file2의 내용을 처음부터 10번째 줄까지만 출력
+cat file1 fil2 | tail <- file1과 file2의 내용을 끝에서부터 10번꺠 줄까지만 출력
+
+'>', '>>' 기호 
+'>' <- 기존에 있는 파일 내용을 지우고 저장
+'>>' <- 기존 파일 내용 뒤에 덧붙여서 저장
+'<' <- 파일의 데이터를 명령어에 입력 
+
+echo aaa > a.txt  <-(새)파일 a.txt에 문자영에 aaa 복사
+echo bbb >> a.txt  <-(새)파일 a.txt에 문자열 추가 
+cat file1 file2 > file3  <- file1, file2의 명령 결과를 합쳐서 file3라는 파일에 저장
+cat file4 >> file3  <-file3에 file4의 내용 추가
+cat < file  <- 결과 출력
+
+git 폴더 삭제를 원할 때는
+
+git -rf.git  <-사용
+-f  <-강제로 파일이나 디렉토리를 삭제
+-r  <- 디렉토리 내부의 모든 내용을 삭제
+
