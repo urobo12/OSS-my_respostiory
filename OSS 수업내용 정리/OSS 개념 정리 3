@@ -1,0 +1,70 @@
+working directory & working tree
+
+staging Area & index
+
+git repository
+
+
+ - git add: working -> staging 
+
+- git commit : staging -> git respository 
+
+git statsu [--long]    <- 현재 상태보기, 기본값
+git statsu [-short | -s]    <- 현채 상태를 간단히 표시
+git config --global --edit    <- 도움말보기
+
+수정 라다이렉션 -> '>' , 추가 라이이렉션 -> '>'
+echo create > hello.txt    <- hello.txt 파일 생성
+
+cat hello.txt    <- hello.txt 파일 확인
+create
+
+untracked file <- 추적되지 않는 파일
+관리되지 않는 파일 이라고 한다.
+
+git add hello.txt  <- hello 파일을 stage 영역에 추가 (복사) 함
+
+<commit>
+git commit    <- 커밋 메세지를 입력할 기본 편집기 실해됨
+git commit -m    <- 커밋 메세지 직접입력
+git commit -am 'message'    <-추과와 함께 커밋을 함께 실행
+git commit -a -m 'messgae'    <- 추가와 함께 커밋을 실행
+
+untracked file은 추가한 이후에 커밋을 해야함
+깃에서 추가와 커밋을 동시에 불가능
+
+git commit -m A     <- 커밋 메세지를 A라고 씀
+첫 줄 메세지 제목,
+한 줄 뛰우고 
+메세지 내용을 자세하게 적음
+
+<git log>
+git log     <- 로기 이력 정보를 표시
+git long --oneline    <- 로그 이력을 한줄로 표시
+git log [--patch | -p]    <- 로그 이력과 함께 파일의 변화를  표시
+
+모든 커밋을 구분하기 위한 번호인 '커밋 ID' or '체크썸(checksum)' 
+
+함호학의 SHA -1
+f(key) - value
+160 비트 미는 40개의 16진수로 표시
+
+--oneline     <- 한 줄로 간단히
+커밋 ID는 40개 16진수 중에 맨 7개 자리만 표시
+
+--patch, -p    <- 커밋 정보뿐만이 아니라 이전 커밋과 현재 커밋 파일의 차이가 표시
+첫 커밋이므로
+/dev/nell
+현재 커밋 파일은 b/hello.txt 임을 표시
+
+<git show>
+git show    <-
+git show    <-
+git show    <-
+git show    <-
+git show    <-
+
+git log과 git show와의 차이 log - git의 모든 정보 표시 show 지정한 정보 표시
+
+
+
