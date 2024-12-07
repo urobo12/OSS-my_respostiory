@@ -80,6 +80,14 @@ Modified fille
 git log <- 커밋 로그 모두 보기
 git show <- 특정한 커밋 로그 보기
 
+git log  <- 기본적으로 가장 최근의 커밋 부터 표시
+
+git log 옵션
+git log --graph  <- 문자 그림으로 로그 이력 그리기
+git log --reverse  <-오래된 커밋부터 표시
+git log --all  <- 모든 브랜치의 로그 이력 표시
+git log -n  <- 최근 n개의 로그 이력 표시
+
 <깃 설정>
 사용자 이름과 전자 메일 설정 - 설정 값에서 큰 따음표와 작은 따음표 모두 사용 가능하며 공백이 없으면 따음표 생략이 가능
 
