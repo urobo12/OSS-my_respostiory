@@ -124,9 +124,11 @@ global - 현재 모든 저장소
 local - 현재 사용자의 현재 저장소
 
 --global 옵션
+전역 설정 해당 사용자에게만 적용되는 설정으로 명령
 
-
-
+git init basic  <- 저장소 생성
+cd basic  <- 폴더 이동
+ls -al  <- 파일 확인
 
 
 
