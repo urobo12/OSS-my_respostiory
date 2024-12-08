@@ -73,7 +73,7 @@ untracked file <- 붉은색 - 붉은 색은 작업 디렉토리를 의미
 A new file <- 녹색 - 스테이징 영역을 의미
 
 다시 수정한 파일 
-Modified fille 
+Modified file 
 <- 붉은 색 - 붉은 색 표시는 작업 디렉토리를 의미, 작업 디렉토리 영역에서 파일이 수정된 것을 의미
 <- 녹색 - 녹색 표시는 스테이징 영역을 의미, 최근 커밋과 비교해서 스테이징 영역의 파일이 수정된 것을 의미
 
@@ -84,9 +84,25 @@ git log  <- 기본적으로 가장 최근의 커밋 부터 표시
 
 git log 옵션
 git log --graph  <- 문자 그림으로 로그 이력 그리기
-git log --reverse  <-오래된 커밋부터 표시
+git log --reverse  <-오래된 커밋부터 표시 (--graph와 같이 사용 불가)
 git log --all  <- 모든 브랜치의 로그 이력 표시
 git log -n  <- 최근 n개의 로그 이력 표시
+
+최신 커밋 순으로 HEAD, ~HEAD, ~~?HEAD 로 표시
+HEAD
+HEAD~, HEAD^, HEAD~1, HEAD^1
+HEAD~~, HEAD^^, HEAD~^, HEAD~2
+
+과거 커밋 HEAD~로 이동하는 명려어 <checkout>
+git checkout HEAD~  <- HEAD 이전 커밋으로 이동
+git checkout -    <- 이전 checkout으로 이동
+git checkout main  <- 브랜치의 마지막 커밋으로 이동
+
+과거 커밋으로 이동
+현재 상태가 꺠끗해야 가능  <- 깃 세 영역이 동일한 상태
+떨어진 HEAD 상태 <- HEAD가 마지막 커밋이 아닌 그 이전을 가리킨다는 의미
+
+git switch 도 동일한 역할을 함 추후 다시 배움
 
 <깃 설정>
 사용자 이름과 전자 메일 설정 - 설정 값에서 큰 따음표와 작은 따음표 모두 사용 가능하며 공백이 없으면 따음표 생략이 가능
