@@ -56,3 +56,18 @@ git restore -- source=HEAD^ --staged [file]  <- 바로 이전의 파일을 스�
 
 git restore --source=HEAD --staged f  <- 깃 저장소의 내용을 스테이지 영역에 복원 (git restore --staged f) 과 같음
 
+< 명령 별칭 생성 >
+[alias]
+ex) git status -s = git ss
+ss = status -s
+s = status
+co = checkout 
+br = branch
+c = commit
+
+생성 방법
+git config --globla alias.ss'status -s'
+그러면 git ss를 쓰면 git status -s 와 같은 명령어로 사용할 수 있다.
+
+
+
