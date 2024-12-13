@@ -84,7 +84,7 @@ git branch  <- 커밋이 발생한 브랜치 목록 보이기
 git branch -v  <- 브랜치마다 마지막 커밋 ID와 메시지도 함께 표시
 
 이전 브랜치로 이동
-git switch -
+git switch -d
 git checkout -
 
 다른 브랜치로 이동
