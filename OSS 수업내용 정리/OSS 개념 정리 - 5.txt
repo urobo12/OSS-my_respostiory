@@ -95,6 +95,7 @@ git switch [branch]
 -HEAD가 현재 브랜치가 아닌 그 이전 커밋을 가리키는 상태
 
 git checkout HEAD~   <- 현재 브랜치에서 마지막 커밋 이전 커밋으로 이동
+git switch -d HEAD~  <- 현재 브랜치에서 마지막 커밋 이전 커밋으로 이동
 
 이동 커밋 - 상대적인 HEAD~ 또는 HEAD^^, commit ID를 사용
 물결~ : tilde (틸드)
