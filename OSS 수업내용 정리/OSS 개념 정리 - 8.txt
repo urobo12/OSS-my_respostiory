@@ -1,1 +1,35 @@
+<임시저장 stash>
+깃 3 영역 + stash 영역
+
+깃 영역의 가장 단순한 형태 Nothing to commit, working tree is clean
+저장소 .git폴더(stageing area, git local repository와 작업 디렉토리영역이 같은 상태인 것을 말한다.
+
+stash - 놓다. 감추다, 남겨두다, 안전한 곳에 두다. (사전적 의미)
+
+커밋할 필요 없이 파일의 변경 사항을 숨기거나 비밀리에 저장할 수 있는 강력한 도구
+
+-작업 디렉토리와 스테이징 영역의 원래의 내용을 stash 스택에 저장
+-작업 디렉토리와 스테이징 영역의 값을 깃 저장소의 마지막 커밋 내용으로 복사
+
+따로 안전한 곳에 저장했다가 다시 가져올 수 있는 기능
+- 작업 디렉토리와 스테이징 영역의 내요응ㄹ 저장
+
+가장 늦게 넣은 것이 맨 처음에 나온다. (Last In - First Out)
+Push로 넣고 POP로 가져온다.
+
+브랜치 이동 또는 이전 커밋으로 이동하려면 커밋이 없고, 작업 트리가 깨끗해야한다. (git switch bname, git checkout HEAD~)
+- 이때 필요
+
+작업 디렉토리 스태이징 영역의 내용을 stash에 저장되고 작업 디렉토리 내용과 스테이징 영역의 내용이 최신 커밋 자료에로 남음
+
+git stash  <- 
+git stash -m  <-
+git stash save  <- 
+git stash save <- 
+
+--keep-index, -k
+
+--include-untracked
+
+
 
