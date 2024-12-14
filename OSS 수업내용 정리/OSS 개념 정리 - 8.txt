@@ -52,7 +52,7 @@ git stash pop stash@{n}  <- 최근 지정된 임시저장소 내용을 가져와
 git stash apply  <- 최근 또는 지정된 임시저장소 내용을 가져와 반영, 작업 디렉토리만 반영, stash 목록은 그대로
 git stash apply stash@{n}  <- 최근 또는 지정된 임시저장소 내용을 가져와 반영, 작업 디렉토리만 반영, stash 목록은 그대로 (중간에 있는 목록을 빼오고 싶을 때 지정)
 
-git stash spply --index  <- 최근 또는 지정된 임시저장소 내용을 가져와 반영, 작업 디렉토리와 스테이징 영역도 반영, stash 목록은 그대로
+git stash apply --index  <- 최근 또는 지정된 임시저장소 내용을 가져와 반영, 작업 디렉토리와 스테이징 영역도 반영, stash 목록은 그대로
 git stash apply --index stash@{n}
 
 
